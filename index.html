@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unnecessary Investigation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="noise"></div>
+
+  <!-- INTRO -->
+  <section class="screen active" id="intro">
+    <div class="system-label">SYSTEM INITIALIZING...</div>
+
+    <h1>
+      An unnecessary<br>
+      project has been detected.
+    </h1>
+
+    <div class="system-box">
+      <div><span>REASON</span> Unknown</div>
+      <div><span>PURPOSE</span> Also unknown</div>
+      <div><span>SHOULD WE CONTINUE?</span> Probably</div>
+    </div>
+
+    <button class="main-btn" onclick="showScreen('photo')">
+      obviously
+    </button>
+  </section>
+
+
+  <!-- PHOTO -->
+  <section class="screen" id="photo">
+
+    <div class="top-label">IMAGE_ANALYSIS</div>
+
+    <div class="photo-container">
+      <img src="photo.jpg" alt="Photo">
+    </div>
+
+    <div class="analysis">
+      <p>SUBJECTS DETECTED: <b>2</b></p>
+      <p>SERIOUSNESS LEVEL: <b>0.4%</b></p>
+      <p>NORMAL BEHAVIOR: <b>INSUFFICIENT EVIDENCE</b></p>
+    </div>
+
+    <div class="saving">
+      Saving anyway.
+    </div>
+
+    <button class="main-btn" onclick="showScreen('transition')">
+      continue investigation
+    </button>
+
+  </section>
+
+
+  <!-- TRANSITION -->
+  <section class="screen" id="transition">
+
+    <div class="warning-small">WAIT.</div>
+
+    <h1>
+      The system found<br>
+      something worse.
+    </h1>
+
+    <div class="file-detected">
+      VIDEO_FILE_DETECTED
+    </div>
+
+    <button class="main-btn" onclick="showScreen('warning')">
+      inspect evidence
+    </button>
+
+  </section>
+
+
+  <!-- WARNING -->
+  <section class="screen" id="warning">
+
+    <div class="warning-title">
+      SYSTEM WARNING
+    </div>
+
+    <h1>
+      Are you sure<br>
+      you want to continue?
+    </h1>
+
+    <p class="tiny">
+      This decision cannot be explained later.
+    </p>
+
+    <div class="button-row">
+      <button class="main-btn" onclick="startVideo()">
+        yes
+      </button>
+
+      <button class="main-btn secondary" onclick="startVideo()">
+        absolutely yes
+      </button>
+    </div>
+
+  </section>
+
+
+  <!-- VIDEO -->
+  <section class="screen video-screen" id="videoScreen">
+
+    <div class="video-header">
+      <span>MEMORY_01</span>
+      <span id="videoStatus">ANALYZING...</span>
+    </div>
+
+    <div class="video-wrapper">
+      <video id="mainVideo" playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+      <div id="joke1" class="video-joke">
+        behavior: questionable
+      </div>
+
+      <div id="joke2" class="video-joke">
+        confidence: decreasing
+      </div>
+
+      <div id="joke3" class="video-joke">
+        why did you two do this
+      </div>
+    </div>
+
+    <button id="soundBtn" class="sound-btn" onclick="toggleSound()">
+      🔇 SOUND OFF
+    </button>
+
+  </section>
+
+
+  <!-- AFTER VIDEO -->
+  <section class="screen" id="afterVideo">
+
+    <div class="after-text">
+      <span>Yeah.</span>
+      <span>That was worth making this for.</span>
+    </div>
+
+    <button class="main-btn" onclick="showScreen('disclaimer')">
+      continue
+    </button>
+
+  </section>
+
+
+  <!-- DISCLAIMER -->
+  <section class="screen" id="disclaimer">
+
+    <div class="legal-label">
+      IMPORTANT LEGAL DISCLAIMER
+    </div>
+
+    <div class="disclaimer-box">
+
+      <h1>
+        The previous analysis<br>
+        was conducted by an idiot.
+      </h1>
+
+      <p>
+        The video is, in fact, good.
+      </p>
+
+      <p class="probably">
+        Probably.
+      </p>
+
+      <div class="cancelled">
+        FURTHER INVESTIGATION<br>
+        HAS BEEN CANCELLED.
+      </div>
+
+    </div>
+
+    <button class="main-btn" onclick="showScreen('final')">
+      understood
+    </button>
+
+  </section>
+
+
+  <!-- FINAL -->
+  <section class="screen final-screen" id="final">
+
+    <div class="final-photo">
+      <img src="photo.jpg" alt="Us">
+    </div>
+
+    <div class="final-content">
+
+      <div class="question">
+        WOULD I DELETE IT?
+      </div>
+
+      <div class="answer">
+        Absolutely not.
+      </div>
+
+      <div class="question second">
+        WOULD I MAKE FUN OF IT?
+      </div>
+
+      <div class="answer">
+        Obviously.
+      </div>
+
+      <div class="reason-box">
+
+        <div class="reason-title">
+          REASON FOR KEEPING THE VIDEO
+        </div>
+
+        <div class="reason">
+          because it's funny
+        </div>
+
+        <div class="reason">
+          because it's us
+        </div>
+
+        <div class="reason">
+          because deleting it would be suspicious
+        </div>
+
+      </div>
+
+      <div class="verdict">
+
+        <div class="verdict-title">
+          FINAL VERDICT
+        </div>
+
+        <div>VIDEO: <b>APPROVED ✓</b></div>
+        <div>YOUR HONOR: <b>NOT GUILTY</b></div>
+        <div>THE TWO OF YOU: <b>STILL QUESTIONABLE</b></div>
+
+      </div>
+
+      <div class="closed">
+        ARCHIVE CLOSED.<br>
+        Please return to your regularly scheduled day.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
